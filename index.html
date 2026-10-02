@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Someone Special ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 15% 15%, #34203e 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 85%, #391923 0%, transparent 45%),
+        #100d16;
+    color: #f9f0e5;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.ambient {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.13;
+    pointer-events: none;
+}
+
+.ambient.one {
+    background: #a64c91;
+    top: -150px;
+    left: -100px;
+}
+
+.ambient.two {
+    background: #a82b4c;
+    bottom: -150px;
+    right: -100px;
+}
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+    opacity: 0;
+    animation: floatHeart 12s linear infinite;
+    font-size: 18px;
+    filter: drop-shadow(0 0 8px currentColor);
+}
+
+.heart:nth-child(1) {
+    left: 10%;
+    color: #db5479;
+    animation-delay: 0s;
+}
+.heart:nth-child(2) {
+    left: 28%;
+    color: #ba7bd5;
+    animation-delay: 4s;
+    font-size: 13px;
+}
+.heart:nth-child(3) {
+    left: 53%;
+    color: #d64c69;
+    animation-delay: 7s;
+}
+.heart:nth-child(4) {
+    left: 76%;
+    color: #bd83d9;
+    animation-delay: 2s;
+    font-size: 14px;
+}
+.heart:nth-child(5) {
+    left: 91%;
+    color: #dc6684;
+    animation-delay: 9s;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    12% { opacity: 0.6; }
+    80% { opacity: 0.35; }
+    100% {
+        transform: translateY(-115vh) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    z-index: 2;
+    animation: rise 1.2s ease both;
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    position: relative;
+    text-align: center;
+    padding: 55px 34px 45px;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.055),
+        rgba(255,255,255,0.018)
+    );
+    border: 1px solid rgba(218,177,111,0.28);
+    border-radius: 5px;
+    box-shadow:
+        0 25px 90px rgba(0,0,0,0.42),
+        inset 0 0 45px rgba(255,255,255,0.012);
+    backdrop-filter: blur(12px);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(218,177,111,0.11);
+    pointer-events: none;
+}
+
+.eyebrow {
+    color: #d4b37b;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+    font-weight: 500;
+}
+
+.rose {
+    font-size: 39px;
+    margin-bottom: 22px;
+    display: inline-block;
+    filter: drop-shadow(0 0 13px rgba(213,78,119,0.3));
+    animation: gentleBeat 3s ease-in-out infinite;
+}
+
+@keyframes gentleBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.09); }
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 9vw, 51px);
+    line-height: 1.12;
+    font-weight: 500;
+    color: #f8ead9;
+    margin-bottom: 20px;
+}
+
+.gold {
+    color: #d8b77c;
+    font-style: italic;
+}
+
+.description {
+    color: #c4b7c6;
+    font-size: 14px;
+    line-height: 1.9;
+    font-weight: 300;
+    max-width: 310px;
+    margin: 0 auto 32px;
+}
+
+.line {
+    height: 1px;
+    width: 55px;
+    background: #b99a68;
+    margin: 0 auto 27px;
+    opacity: 0.75;
+}
+
+button {
+    font-family: 'DM Sans', sans-serif;
+    border: 1px solid #c5a46d;
+    background: linear-gradient(120deg, #d5b47d, #b68d58);
+    color: #21151b;
+    padding: 15px 34px;
+    min-width: 175px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+button:hover {
+    background: #f0d5a4;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 25px rgba(196,157,97,0.19);
+}
+
+button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 4px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button.secondary {
+    color: #ddc6ce;
+    background: transparent;
+    border-color: rgba(216,183,124,0.45);
+}
+
+button.secondary:hover {
+    background: rgba(255,255,255,0.06);
+    color: white;
+}
+
+.footer {
+    margin-top: 29px;
+    font-size: 9px;
+    color: #8c7d8e;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.page {
+    animation: pageIn 0.8s ease both;
+}
+
+@keyframes pageIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.celebration {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+    .card { padding: 45px 22px 35px; }
+    .eyebrow { letter-spacing: 3px; }
+    .description { font-size: 13px; }
+    button { min-width: 140px; padding: 14px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="ambient one"></div>
+<div class="ambient two"></div>
+
+<div class="hearts" aria-hidden="true">
+    <span class="heart">♥</span>
+    <span class="heart">♥</span>
+    <span class="heart">♥</span>
+    <span class="heart">♥</span>
+    <span class="heart">♥</span>
+</div>
+
+<main class="wrapper">
+    <section class="card" id="card" aria-live="polite">
+        <div class="page">
+            <div class="eyebrow">A little something for you</div>
+            <div class="rose">🌹</div>
+            <h1>I have something<br><span class="gold">to tell you...</span></h1>
+            <div class="line"></div>
+            <p class="description">
+                Some feelings are too beautiful to keep hidden.
+                And this one is for someone truly special.
+            </p>
+            <button onclick="nextPage()">Continue &nbsp; →</button>
+            <div class="footer">Made with love ♥</div>
+        </div>
+    </section>
+</main>
+
+<script>
+const card = document.getElementById("card");
+
+function showPage(content) {
+    card.innerHTML = `<div class="page">${content}</div>`;
+}
+
+function nextPage() {
+    showPage(`
+        <div class="eyebrow">For someone special</div>
+        <div class="rose">💜</div>
+        <h1>Hey, <span class="gold">You.</span></h1>
+        <div class="line"></div>
+        <p class="description">
+            Every moment feels special when I think of you.
+            You bring a kind of happiness that words can
+            never fully explain.
+        </p>
+        <p class="description">
+            There's just one thing left to say...
+        </p>
+        <button onclick="proposal()">Continue &nbsp; →</button>
+        <div class="footer">A message from my heart</div>
+    `);
+}
+
+function proposal() {
+    showPage(`
+        <div class="eyebrow">One little question</div>
+        <div class="rose">💍</div>
+        <h1>Will you <span class="gold">be mine?</span></h1>
+        <div class="line"></div>
+        <p class="description">
+            You make my world more beautiful.
+            And I'd love to make a thousand more
+            beautiful memories with you.
+        </p>
+        <div class="buttons">
+            <button onclick="celebrate()">YES ♥</button>
+            <button class="secondary" onclick="noThanks()">NO</button>
+        </div>
+        <div class="footer">With all my heart</div>
+    `);
+}
+
+function noThanks() {
+    showPage(`
+        <div class="eyebrow">Thank you</div>
+        <div class="rose">🌷</div>
+        <h1>It's <span class="gold">okay.</span></h1>
+        <div class="line"></div>
+        <p class="description">
+            Thank you for reading my message.
+            Your happiness will always matter.
+        </p>
+        <div class="footer">With kindness ♥</div>
+    `);
+}
+
+function celebrate() {
+    showPage(`
+        <div class="eyebrow">A beautiful beginning</div>
+        <div class="celebration">❤️ 💜 ❤️</div>
+        <h1>You've made me<br><span class="gold">so happy!</span></h1>
+        <div class="line"></div>
+        <p class="description">
+            Here's to us, to beautiful moments,
+            and to memories yet to be made.
+        </p>
+        <div class="footer">Forever in this moment ♥</div>
+    `);
+
+    for (let i = 0; i < 22; i++) {
+        const heart = document.createElement("span");
+        heart.className = "heart";
+        heart.textContent = i % 2 === 0 ? "♥" : "♥";
+        heart.style.left = (Math.random() * 100) + "%";
+        heart.style.animationDelay = (Math.random() * 2) + "s";
+        heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+        heart.style.fontSize = (12 + Math.random() * 15) + "px";
+        heart.style.color = i % 2 === 0 ? "#d65b83" : "#b889d5";
+        document.querySelector(".hearts").appendChild(heart);
+    }
+}
+</script>
+
+</body>
+</html>
